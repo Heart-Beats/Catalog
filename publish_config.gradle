@@ -1,0 +1,5 @@
+ext {
+    publish_groupId = "com.hl"
+    publish_artifactId = "catalog"
+    publish_version = "1.0.0"
+}

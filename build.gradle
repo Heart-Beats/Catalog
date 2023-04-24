@@ -1,0 +1,15 @@
+plugins {
+    id("maven-publish")
+}
+
+apply from: "./publish_config.gradle"
+
+task clean(type: Delete) {
+    if (rootProject.buildDir.exists()) {
+        delete rootProject.buildDir
+    }
+
+    gradle.includedBuilds.forEach {
+        dependsOn it.task(":clean")
+    }
+}

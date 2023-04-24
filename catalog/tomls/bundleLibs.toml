@@ -1,0 +1,24 @@
+# 声明依赖组, 可直接依赖组中定义所有库
+[bundles]
+
+# 测试相关
+androidTest = ["junit", "androidx-test-ext-junit", "androidx-test-espresso-core"]
+
+projectBase = ["androidx_core_ktx", "androidx_collection_ktx", "androidx_appcompat", "androidx_constraint_layout",
+    "androidx_activity_ktx", "androidx_fragment_ktx"]
+
+compose = ["jetpack-compose-material3", "jetpack-compose-ui-tooling-preview", "jetpack-compose-ui-tooling",
+    "jetpack-activity-compose", "jetpack-lifecycle-viewmodel-compose"]
+
+# cameraX
+cameraX = ["androidx_camera_core", "androidx_camera_camera2", "androidx_camera_lifecycle", "androidx_camera_view", "androidx_camera_extensions"]
+
+# palette 取色板
+palette = ["androidx_palette", "androidx_palette_ktx"]
+
+#lifecycle_extensions
+lifecycle_extensions = ["androidx_lifecycle_extensions", "androidx_lifecycle_livedata_ktx", "androidx_lifecycle_viewmodel_ktx", "androidx_lifecycle_runtime_ktx"]
+
+
+
+

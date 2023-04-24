@@ -1,0 +1,28 @@
+apply plugin: 'maven-publish'
+
+project.publishing {
+    publications {
+        versionCatalog(MavenPublication) {
+            groupId = publish_groupId
+            artifactId = publish_artifactId
+            version = publish_version
+
+            from(components["versionCatalog"])
+        }
+    }
+
+    this.repositories {
+        // 配置 MavenLocal 仓库
+        // mavenLocal()
+    }
+}
+
+task publishingToMavenLocal {
+    this.description = "打包至 MavenLocal"
+    this.group = "my-publishing"
+    dependsOn 'publishToMavenLocal'
+
+    doLast {
+        println("打包完成 ------>  MavenLocal")
+    }
+}
