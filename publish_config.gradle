@@ -1,5 +1,21 @@
+def isPublishRelease = false
+def publish_version = '1.0.0'
+
 ext {
-    publish_groupId = "com.hl"
-    publish_artifactId = "catalog"
-    publish_version = "1.0.0"
+    myGroupId = 'com.hl'
+
+    // 打包至 GitHub 配置
+    GITHUB_USER = System.getenv("GITHUB_USER") ?: 'Heart-Beats'
+    GITHUB_CATALOG_PROJECT_NAME = System.getenv("GITHUB_PROJECT") ?: 'Catalog'
+    GITHUB_BASE_PROJECT_PROJECT_NAME = System.getenv("GITHUB_PROJECT") ?: 'BaseProject' // 这里也发布到基础架构库中去，方便统一管理
+    GITHUB_CATALOG_REPOSITORY = "https://maven.pkg.github.com/" + "${GITHUB_USER}/${GITHUB_CATALOG_PROJECT_NAME}".toLowerCase()
+    GITHUB_BASE_PROJECT_REPOSITORY = "https://maven.pkg.github.com/" + "${GITHUB_USER}/${GITHUB_BASE_PROJECT_PROJECT_NAME}".toLowerCase()
+    GITHUB_PERSONAL_ACCESS_TOKEN = System.getenv("GITHUB_PERSONAL_ACCESS_TOKEN") ?: project.properties['GITHUB_PACKAGES_WRITE_TOKEN']
+
+    getPublicationVersion = {
+        def versionSuffix = ''
+        if (!isPublishRelease) versionSuffix = '-SNAPSHOT'
+
+        return publish_version + versionSuffix
+    }
 }
