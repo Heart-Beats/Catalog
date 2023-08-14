@@ -37,27 +37,28 @@ jetpack-activity-compose = { group = "androidx.activity", name = "activity-compo
 jetpack-lifecycle-viewmodel-compose = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-compose", version.ref = "lifecycle" }
 # 集成  compose 对于 lifecycle 的扩展
 jetpack-lifecycle-runtime-compose = { group = "androidx.lifecycle", name = "lifecycle-runtime-compose", version.ref = "lifecycle" }
-# 集成  compose navigation
-jetpack-navigation-compose = { module= "androidx.navigation:navigation-compose", version.ref = "navigation" }
-
 
 #  -------------------------------- jetpack-navigation  --------------------------------
-#Java language implementation
+# 正常情况下不用依赖 runtime, 因为添加后面的库自动依赖
+jetpack_navigation_runtime = { module = "androidx.navigation:navigation-runtime", version.ref = "navigation" }
+jetpack_navigation_runtime_ktx = { module = "androidx.navigation:navigation-runtime-ktx", version.ref = "navigation" }
+# Java 版本
 jetpack_navigation_fragment = { module = "androidx.navigation:navigation-fragment", version.ref = "navigation" }
 jetpack_navigation_ui = { module = "androidx.navigation:navigation-ui", version.ref = "navigation" }
-# Kotlin
+# Kotlin  版本
 jetpack_navigation_fragment_ktx = { module = "androidx.navigation:navigation-fragment-ktx", version.ref = "navigation" }
 jetpack_navigation_ui_ktx = { module = "androidx.navigation:navigation-ui-ktx", version.ref = "navigation" }
-#Feature module Support
+# 动态模块支持
 jetpack_navigation_dynamic_features_fragment = { module = "androidx.navigation:navigation-dynamic-features-fragment", version.ref = "navigation" }
-# Jetpack Compose Integration
+# Jetpack Compose Navigation 集成
 jetpack_navigation_compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigation" }
 
 # 提供安全可靠 Navigation 操作，解决 GitHub 上 "Navigation Add Hide 修改版" 普遍存在 "popUpToInclusive 导致 Fragment 不符预期加载" 等问题。仓库地址： https://github.com/KunMinX/Smooth-Navigation
-smooth-navigation = { module = "com.kunminx.arch:smooth-navigation", version.ref = "smoothNavigation" }
+smooth_navigation = { module = "com.kunminx.arch:smooth-navigation", version.ref = "smoothNavigation" }
 
 
 
+androidx_annotation = { module="androidx.annotation:annotation", version.ref = "annotation" }
 androidx_core_ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 androidx_collection_ktx = { module = "androidx.collection:collection-ktx", version.ref = "collectionKtx" }
 androidx_appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
@@ -108,13 +109,13 @@ okHttp_logging_interceptor = { module = "com.squareup.okhttp3:logging-intercepto
 okHttp_okhttp = { module = "com.squareup.okhttp3:okhttp", version.ref = "okhttp" }
 
 #基于 Okhttp 的一个网络请求库：https://github.com/getActivity/EasyHttp 除了定义接口进行请求外，可以更方便地进行文件上传或者下载
-okhttp_easy_http = { module = "com.github.getActivity:EasyHttp", version.ref = "easyHttp" }
+okHttp_easy_http = { module = "com.github.getActivity:EasyHttp", version.ref = "easyHttp" }
 
 
 #基础依赖包，必须要依赖
 statusbar_immersionbar = { module = "com.geyifeng.immersionbar:immersionbar", version.ref = "immersionBar" }
 # kotlin扩展（可选）
-statusbar_immersionbar_ktx = { module = "com.geyifeng.immersionbar:immersionbar", version.ref = "immersionBar" }
+statusbar_immersionbar_ktx = { module = "com.geyifeng.immersionbar:immersionbar-ktx", version.ref = "immersionBar" }
 
 
 event_bus = { module = "org.greenrobot:eventbus", version.ref = "eventBus" }
@@ -164,8 +165,6 @@ wechat_sdk_android_without_mta = { module = "com.tencent.mm.opensdk:wechat-sdk-a
 
 # QQ完整版
 umeng_share_qq = { module = "com.umeng.umsdk:share-qq", version.ref = "umengShare" }
-# QQ官方sdk 3.53及之后版本需要集成okhttp3.x，必选
-okhttp_okhttp = { module = "com.squareup.okhttp3:okhttp", version.ref = "okhttp" }
 
 # 新浪微博完整版
 umeng_share_sina ={ module = "com.umeng.umsdk:share-sina", version.ref = "umengShare" }
