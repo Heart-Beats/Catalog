@@ -4,7 +4,7 @@
 # 测试相关
 androidTest = ["junit", "androidx-test-ext-junit", "androidx-test-espresso-core"]
 
-projectBase = ["androidx_core_ktx", "androidx_collection_ktx", "androidx_appcompat", "androidx_constraint_layout",
+projectBase = ["androidx_core_ktx", "androidx_collection_ktx", "androidx_appcompat", "androidx_constraintlayout",
     "androidx_activity_ktx", "androidx_fragment_ktx"]
 
 compose = ["jetpack-compose-material3", "jetpack-compose-ui-tooling-preview", "jetpack-compose-ui-tooling",

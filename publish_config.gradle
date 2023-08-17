@@ -1,4 +1,4 @@
-def isPublishRelease = false
+def isPublishRelease = true
 def publish_version = '1.0.0'
 
 ext {

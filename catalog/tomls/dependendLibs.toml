@@ -62,7 +62,7 @@ androidx_annotation = { module="androidx.annotation:annotation", version.ref = "
 androidx_core_ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 androidx_collection_ktx = { module = "androidx.collection:collection-ktx", version.ref = "collectionKtx" }
 androidx_appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
-androidx_constraint_layout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintLayout" }
+androidx_constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintLayout" }
 androidx_activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 androidx_activity_ktx = { group = "androidx.activity", name = "activity-ktx", version.ref = "activity" }
 androidx_fragment = { group = "androidx.fragment", name = "fragment", version.ref = "fragment" }
@@ -83,6 +83,7 @@ androidx_palette = { group = "androidx.palette", name = "palette", version.ref =
 androidx_palette_ktx = { group = "androidx.palette", name = "palette-ktx", version.ref = "palette" }
 
 androidx_startup = { group = "androidx.startup", name = "startup-runtime", version.ref = "startup" }
+androidx_webkit = { group = "androidx.webkit", name = "webkit", version.ref = "webkit" }
 
 # 以下这种形式也支持
 androidx_lifecycle_extensions = "androidx.lifecycle:lifecycle-extensions:2.2.0"
@@ -230,7 +231,7 @@ flowLayout = { module = "com.hyman:flowlayout-lib", version.ref = "flowLayout" }
 
 
 #  模仿微信拍照的Android开源控件, 地址: https://github.com/CJT2325/CameraView
-camera = { module = "cjt.library.wheel:camera", version.ref = "cameraView" }
+camera_likeWX = { module = "cjt.library.wheel:camera", version.ref = "cameraView" }
 
 # 支持粘贴的验证码输入框
 verificationCodeInputView = { module = "com.github.Wynsbin:VerificationCodeInputView", version.ref = "verificationCodeInputView" }

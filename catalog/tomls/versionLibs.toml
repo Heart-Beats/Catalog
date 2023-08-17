@@ -36,6 +36,7 @@ dataBinding = "7.2.2"
 cameraX = "1.2.0"
 palette = "1.0.0"
 startup = "1.1.1"
+webkit = "1.7.0"
 
 navigation = "2.6.0"
 smoothNavigation = "4.0.0"
