@@ -69,6 +69,7 @@ androidx_fragment = { group = "androidx.fragment", name = "fragment", version.re
 androidx_fragment_ktx = { group = "androidx.fragment", name = "fragment-ktx", version.ref = "fragment" }
 androidx_security_crypto = { group = "androidx.security", name = "security-crypto", version.ref = "securityCrypto" }
 androidx_recyclerview = { group = "androidx.recyclerview", name = "recyclerview", version.ref = "recyclerview" }
+androidx_viewpager2 = { group = "androidx.viewpager2", name = "viewpager2", version.ref = "viewpager2" }
 androidx_view_binding = { group = "androidx.databinding", name = "viewbinding", version.ref = "dataBinding" }
 androidx_databinding_runtime = { group = "androidx.databinding", name = "databinding-runtime", version.ref = "dataBinding" }
 
