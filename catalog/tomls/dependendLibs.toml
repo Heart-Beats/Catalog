@@ -220,6 +220,8 @@ pickSelector_file_picker = { module = "me.rosuh:AndroidFilePicker", version.ref 
 
 # 快速实现相关 view  Shape 框架, github 地址：https://github.com/getActivity/ShapeView
 shapeView = { module = "com.github.getActivity:ShapeView", version.ref = "shapeView" }
+#  ShapeDrawable：https://github.com/getActivity/ShapeDrawable
+shapeDrawable = { module = "com.github.getActivity:ShapeDrawable", version.ref = "shapeDrawable" }
 
 # 可高度定制化的日历组件， github 地址：https://github.com/angcyo/CalendarView
 calendarView = { module = "com.github.angcyo:CalendarView", version.ref = "calendarView" }
