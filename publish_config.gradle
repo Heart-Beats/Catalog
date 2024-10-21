@@ -1,5 +1,5 @@
 def isPublishRelease = true
-def publish_version = '1.0.2'
+def publish_version = '1.0.3'
 
 ext {
     myGroupId = 'com.hl'

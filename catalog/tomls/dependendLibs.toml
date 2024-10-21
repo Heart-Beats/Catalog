@@ -105,6 +105,14 @@ xlog = { module = "com.elvishew:xlog", version.ref = "xlog" }
 
 retrofit_retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
 retrofit_converter_gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "retrofit" }
+retrofit_converter_jackson = { module = "com.squareup.retrofit2:converter-jackson", version.ref = "retrofit" }
+retrofit_converter_moshi = { module = "com.squareup.retrofit2:converter-moshi", version.ref = "retrofit" }
+retrofit_converter_protobuf = { module = "com.squareup.retrofit2:converter-protobuf", version.ref = "retrofit" }
+retrofit_converter_wire = { module = "com.squareup.retrofit2:converter-wire", version.ref = "retrofit" }
+# xml 数据时使用
+retrofit_converter_jaxb = { module = "com.squareup.retrofit2:converter-jaxb", version.ref = "retrofit" }
+# primitives, boxed, and String 使用
+retrofit_converter_scalars = { module = "com.squareup.retrofit2:converter-scalars", version.ref = "retrofit" }
 retrofit_adapter_rxjava3 = { module = "com.squareup.retrofit2:adapter-rxjava3", version.ref = "retrofit" }
 
 okHttp_logging_interceptor = { module = "com.squareup.okhttp3:logging-interceptor", version.ref = "okhttp" }
