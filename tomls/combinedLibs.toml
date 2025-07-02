@@ -1,3 +1,113 @@
+##################################  versionLibs   #####################################
+# 声明相关库版本号
+[versions]
+
+# Android 环境相关
+compileSdk = "33"
+minSdk = "23"
+targetSdk = "29"
+
+# AGP
+androidGradlePlugin = "8.0.0"
+
+# Junit 测试相关
+junit = "4.+"
+testExtJunit = "1.1.3"
+testEspressoCore = "3.4.0"
+
+
+kotlin = "1.8.0"
+kotlinCoroutines = "1.4.2"
+jetpackComposeBom = "2023.01.00"
+
+annotation = "1.6.0"
+coreKtx = "1.7.0"
+collectionKtx = "1.2.0"
+lifecycle = "2.6.1"
+material = "1.7.0"
+material3 = "1.0.1"
+
+appcompat = "1.6.1"
+constraintLayout = "2.1.4"
+activity = "1.7.2"
+fragment = "1.6.0"
+securityCrypto = "1.0.0"
+recyclerview = "1.2.1"
+viewpager2 = "1.0.0"
+dataBinding = "7.2.2"
+cameraX = "1.2.0"
+palette = "1.0.0"
+startup = "1.1.1"
+webkit = "1.7.0"
+
+navigation = "2.6.0"
+smoothNavigation = "4.0.0"
+
+xlog = "1.10.1"
+androidAutoSize = "v1.2.1"
+
+retrofit = "2.9.0"
+okhttp = "4.10.0"
+easyHttp = "12.0"
+immersionBar = "3.2.2"
+eventBus = "3.3.1"
+rxJava3 = "3.1.3"
+rxAndroid = "3.0.0"
+fancyToast = "2.0.1"
+glide = "4.12.0"
+coil = "2.3.0"
+permissionX = "1.7.1"
+gson = "2.8.9"
+fastJson = "1.1.72.android"
+butterKnife = "10.2.1"
+brvah = "3.0.7"
+xpopup = "2.9.19"
+zxingLite = "2.4.0"
+utilCodeX = "1.31.1"
+shortcutBadger = "1.1.22"
+photoView = "latest.release"
+banner = "2.2.2"
+jsBridge = "1.0.4"
+smartRefreshLayout = "2.0.5"
+pictureSelector = "v3.11.1"
+androidFilePicker = "0.8.3"
+shapeView = "9.0"
+shapeDrawable = "3.0"
+calendarView = "3.7.1.37"
+nCalendar = "5.0.2"
+flowLayout = "1.1.2"
+cameraView = "1.1.9"
+verificationCodeInputView = "1.0.2"
+gsyVideoPlayer = "v8.3.5-release-jitpack"
+weiXinOpenSdk = "+"
+tbsSdk = "44181"
+tencentCos = "5.9.+"
+mmkv = "1.2.15"
+updateAppUtilsx = "2.3.0"
+lottie = "6.0.0"
+waveSideBar = "1.3"
+sideBar = "1.0.0"
+shadow = "2.3.0"
+
+androidGifDrawable = "1.2.25"
+aliPay = "15.8.11"
+sensey = "1.9.0"
+
+umengShare = "7.3.2"
+
+
+##################################  pluginLibs   #####################################
+#声明相关插件库
+[plugins]
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
+android-library = { id = "com.android.library", version.ref = "androidGradlePlugin" }
+kapt = { id = "kapt" }
+kotlin-parcelize = { id = "kotlin-parcelize", version.ref = "kotlin" }
+androidx-navigation-safeargs = { id = "androidx.navigation.safeargs", version.ref = "navigation" }
+
+
+##################################  dependendLibs   #####################################
 #声明相关依赖库
 [libraries]
 
@@ -291,3 +401,26 @@ shadow_loader_impl = { module = "com.tencent.shadow.dynamic:loader-impl", versio
 android_gif_drawable = { module = "pl.droidsonroids.gif:android-gif-drawable", version.ref = "androidGifDrawable" }
 aliPaySdk = { module = "com.alipay.sdk:alipaysdk-android", version.ref = "aliPay" }
 sensey = { module = "com.github.nisrulz:sensey", version.ref = "sensey" }
+
+
+##################################  bundleLibs   #####################################
+# 声明依赖组, 可直接依赖组中定义所有库
+[bundles]
+
+# 测试相关
+androidTest = ["junit", "androidx-test-ext-junit", "androidx-test-espresso-core"]
+
+projectBase = ["androidx_core_ktx", "androidx_collection_ktx", "androidx_appcompat", "androidx_constraintlayout",
+    "androidx_activity_ktx", "androidx_fragment_ktx"]
+
+compose = ["jetpack-compose-material3", "jetpack-compose-ui-tooling-preview", "jetpack-compose-ui-tooling",
+    "jetpack-activity-compose", "jetpack-lifecycle-viewmodel-compose", "jetpack-lifecycle-runtime-compose", "jetpack_navigation_compose"]
+
+# cameraX
+cameraX = ["androidx_camera_core", "androidx_camera_camera2", "androidx_camera_lifecycle", "androidx_camera_view", "androidx_camera_extensions"]
+
+# palette 取色板
+palette = ["androidx_palette", "androidx_palette_ktx"]
+
+#lifecycle_extensions
+lifecycle_extensions = ["androidx_lifecycle_extensions", "androidx_lifecycle_livedata_ktx", "androidx_lifecycle_viewmodel_ktx", "androidx_lifecycle_runtime_ktx"]

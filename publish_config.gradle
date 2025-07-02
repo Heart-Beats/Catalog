@@ -1,21 +1,24 @@
-def isPublishRelease = true
-def publish_version = '1.0.3'
+def IS_PUBLISH_RELEASE = true
+def ARTIFACT_VERSION = '1.0.3'
 
 ext {
+    module_group = "io.github.heart-beats.baseproject"
+
     myGroupId = 'com.hl'
+    libProjectPath = 'libs/project'
+    libUikitPath = 'libs/uikit'
 
     // 打包至 GitHub 配置
     GITHUB_USER = System.getenv("GITHUB_USER") ?: 'Heart-Beats'
-    GITHUB_CATALOG_PROJECT_NAME = System.getenv("GITHUB_PROJECT") ?: 'Catalog'
-    GITHUB_BASE_PROJECT_PROJECT_NAME = System.getenv("GITHUB_PROJECT") ?: 'BaseProject' // 这里也发布到基础架构库中去，方便统一管理
-    GITHUB_CATALOG_REPOSITORY = "https://maven.pkg.github.com/" + "${GITHUB_USER}/${GITHUB_CATALOG_PROJECT_NAME}".toLowerCase()
-    GITHUB_BASE_PROJECT_REPOSITORY = "https://maven.pkg.github.com/" + "${GITHUB_USER}/${GITHUB_BASE_PROJECT_PROJECT_NAME}".toLowerCase()
-    GITHUB_PERSONAL_ACCESS_TOKEN = System.getenv("GITHUB_PERSONAL_ACCESS_TOKEN") ?: project.properties['GITHUB_PACKAGES_WRITE_TOKEN']
+    GITHUB_PROJECT_NAME = System.getenv("GITHUB_PROJECT") ?: 'BaseProject'
+    GITHUB_REPOSITORY = "https://maven.pkg.github.com/" + "${GITHUB_USER}/${GITHUB_PROJECT_NAME}".toLowerCase()
+    GITHUB_PERSONAL_ACCESS_TOKEN = System.getenv("GITHUB_PACKAGES_WRITE_TOKEN") ?: project.properties['GITHUB_PACKAGES_WRITE_TOKEN']
 
+    isPublishRelease =  IS_PUBLISH_RELEASE
     getPublicationVersion = {
-        def versionSuffix = ''
-        if (!isPublishRelease) versionSuffix = '-SNAPSHOT'
+        def VERSION_SUFFIX = ''
+        if (!isPublishRelease) VERSION_SUFFIX = '-SNAPSHOT'
 
-        return publish_version + versionSuffix
+        return ARTIFACT_VERSION + VERSION_SUFFIX
     }
 }

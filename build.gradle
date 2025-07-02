@@ -1,8 +1,8 @@
 plugins {
-    id("maven-publish")
+    id 'com.vanniktech.maven.publish' version '0.33.0' apply false
 }
 
-apply from: "./publish_config.gradle"
+apply from: "./module_maven_publish_apply.gradle"
 
 task clean(type: Delete) {
     if (rootProject.buildDir.exists()) {
