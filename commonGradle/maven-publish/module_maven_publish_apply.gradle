@@ -1,6 +1,5 @@
 //引入 maven 发布配置设置
-apply from: 'publish_config.gradle'
-
+apply from: rootProject.file('./commonGradle/maven-publish/publish_config.gradle').path
 
 subprojects {
     Project project = it
@@ -10,9 +9,15 @@ subprojects {
         module_name = project.path.drop(1)
     }
 
-    // maven 发布脚本路径
-    def mavenPublishScriptPath = rootProject.file('MavenPublish.gradle').path
-    apply from: mavenPublishScriptPath
+    project.afterEvaluate {
+        if(project.plugins.hasPlugin('com.android.application')){
+            return
+        }
+
+        // maven 发布脚本路径
+        def mavenPublishScriptPath =  rootProject.file('./commonGradle/maven-publish/MavenPublish.gradle').path
+        project.apply from: mavenPublishScriptPath
+    }
 }
 
 

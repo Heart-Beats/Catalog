@@ -1,4 +1,4 @@
-apply from: './gradle_config_optimize.gradle'
+apply from: './commonGradle/gradle_config_optimize.gradle'
 
 include ':catalog'
 
